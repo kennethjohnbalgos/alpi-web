@@ -1,0 +1,2 @@
+module ContentSuitesHelper
+end

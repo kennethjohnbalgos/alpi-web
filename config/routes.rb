@@ -4,14 +4,16 @@ AlpiWeb::Application.routes.draw do
 
   match "dashboard(/:action)" => "dashboard#index"
   match "condominiums(/:action)" => "condominiums#index"
-  match "residentials(/:action)" => "residentials#index"
+  match "residential_lots(/:action)" => "residentials#index"
   match "explore(/:action)" => "explore#index"
+  match "the_suites(/:action)" => "suite#index"
   match "home" => "home#index"
 
   resources :content_homes
   resources :content_condos
   resources :content_explores
   resources :content_residentials
+  resources :content_suites
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

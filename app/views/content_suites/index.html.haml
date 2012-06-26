@@ -1,0 +1,23 @@
+%h1 Listing content_suites
+
+%table
+  %tr
+    %th Title
+    %th Context
+    %th Description
+    %th
+    %th
+    %th
+
+  - @content_suites.each do |content_suite|
+    %tr
+      %td= content_suite.title
+      %td= content_suite.context
+      %td= content_suite.description
+      %td= link_to 'Show', content_suite
+      %td= link_to 'Edit', edit_content_suite_path(content_suite)
+      %td= link_to 'Destroy', content_suite, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Content suite', new_content_suite_path
