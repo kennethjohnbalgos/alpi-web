@@ -1,0 +1,23 @@
+%h1 Listing content_residentials
+
+%table
+  %tr
+    %th Title
+    %th Context
+    %th Description
+    %th
+    %th
+    %th
+
+  - @content_residentials.each do |content_residential|
+    %tr
+      %td= content_residential.title
+      %td= content_residential.context
+      %td= content_residential.description
+      %td= link_to 'Show', content_residential
+      %td= link_to 'Edit', edit_content_residential_path(content_residential)
+      %td= link_to 'Destroy', content_residential, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Content residential', new_content_residential_path
