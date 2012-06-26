@@ -1,0 +1,10 @@
+%p#notice= notice
+
+%div.preview
+  .title
+    = @content_item_condo.title
+  =raw @content_item_condo.context
+
+= link_to 'Edit Page', edit_content_item_condo_path(@content_item_condo)
+\|
+= link_to 'Back to Dashboard', "/dashboard"

@@ -1,0 +1,23 @@
+%h1 Listing content_item_condos
+
+%table
+  %tr
+    %th Title
+    %th Description
+    %th Context
+    %th
+    %th
+    %th
+
+  - @content_item_condos.each do |content_item_condo|
+    %tr
+      %td= content_item_condo.title
+      %td= content_item_condo.description
+      %td= content_item_condo.context
+      %td= link_to 'Show', content_item_condo
+      %td= link_to 'Edit', edit_content_item_condo_path(content_item_condo)
+      %td= link_to 'Destroy', content_item_condo, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Content item condo', new_content_item_condo_path
