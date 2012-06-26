@@ -1,0 +1,33 @@
+!!!
+%html
+  %head
+    %title= "Ayala Land Premier Investments"
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    = render partial: 'shared/header'
+    = render partial: 'shared/navigation'
+    #container
+      #main
+        #sidebar
+          = "SIDEBAR"
+        #content
+          = yield
+    #footer
+      #foot_controls
+        = link_to "Home", "#"
+        |
+        = link_to "Explore", "#"
+        |
+        = link_to "Condominiums", "#"
+        |
+        = link_to "Residential Lots", "#"
+        |
+        = link_to "The Suites", "#"
+        |
+        = link_to "The Events", "#"
+      #foot_logos
+        = image_tag('logo_ayalapremier.png', class: 'ayala_land')
+      #foot_info
+        = "Copyright © 2012 Ayala Land Premier Investments - Designed by iKennOnline"
