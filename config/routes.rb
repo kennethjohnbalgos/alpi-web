@@ -1,5 +1,7 @@
 AlpiWeb::Application.routes.draw do
 
+  resources :content_item_residentials
+
   resources :content_item_condos
 
   mount Ckeditor::Engine => '/ckeditor'
