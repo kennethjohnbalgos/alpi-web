@@ -1,4 +1,9 @@
 .page
   .title
-    = @content.title
-  =raw @content.context
+    = image_tag('logo_thesuites.png')
+  .columns
+    #left
+      = image_tag('content_thesuites.jpg')
+    #right
+      =raw @content.context
+      = link_to "Visit the Website", "http://www.thesuites.com.ph", class: 'button', target: '_blank'

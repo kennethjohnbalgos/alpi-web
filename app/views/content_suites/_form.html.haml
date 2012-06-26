@@ -5,11 +5,6 @@
       %ul
         - @content_suite.errors.full_messages.each do |msg|
           %li= msg
-
-  .field
-    = f.label :title
-    %br/
-    = f.text_field :title
           
   .field
     = f.cktext_area :context
