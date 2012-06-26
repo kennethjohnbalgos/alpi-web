@@ -1,0 +1,20 @@
+= form_for @content_item_residential do |f|
+  -if @content_item_residential.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@content_item_residential.errors.count, "error")} prohibited this content_item_residential from being saved:"
+      %ul
+        - @content_item_residential.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :title
+    %br/
+    = f.text_field :title
+  .field
+    = f.label :description
+    %br/
+    = f.text_field :description
+  .field
+    = f.cktext_area :context
+  .actions
+    = f.submit 'Save'

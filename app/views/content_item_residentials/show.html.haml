@@ -1,0 +1,10 @@
+%p#notice= notice
+
+%div.preview
+  .title
+    = @content_item_residential.title
+  =raw @content_item_residential.context
+
+= link_to 'Edit Page', edit_content_item_residential_path(@content_item_residential)
+\|
+= link_to 'Back to Dashboard', "/dashboard"
