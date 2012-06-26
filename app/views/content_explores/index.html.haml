@@ -1,0 +1,23 @@
+%h1 Listing content_explores
+
+%table
+  %tr
+    %th Title
+    %th Context
+    %th Description
+    %th
+    %th
+    %th
+
+  - @content_explores.each do |content_explore|
+    %tr
+      %td= content_explore.title
+      %td= content_explore.context
+      %td= content_explore.description
+      %td= link_to 'Show', content_explore
+      %td= link_to 'Edit', edit_content_explore_path(content_explore)
+      %td= link_to 'Destroy', content_explore, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Content explore', new_content_explore_path

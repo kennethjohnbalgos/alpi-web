@@ -12,4 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require galleria-1.2.7.min
+//= require galleria.miniml.min
+//= require ckeditor/init
 //= require_tree .

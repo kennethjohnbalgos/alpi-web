@@ -1,0 +1,13 @@
+= form_for @content_home do |f|
+  -if @content_home.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@content_home.errors.count, "error")} prohibited this content_home from being saved:"
+      %ul
+        - @content_home.errors.full_messages.each do |msg|
+          %li= msg
+          
+  .field
+    = f.cktext_area :context
+  %br/
+  .actions
+    = f.submit 'Save Changes'

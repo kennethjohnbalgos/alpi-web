@@ -1,0 +1,2 @@
+module ContentHomesHelper
+end

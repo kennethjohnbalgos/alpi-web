@@ -1,0 +1,11 @@
+%p#notice= notice
+
+%div.preview
+  .title
+    = @content_explore.title
+  =raw @content_explore.context
+
+= link_to 'Edit Page', edit_content_explore_path(@content_explore)
+\|
+= link_to 'Back To Dashboard', dashboard_path
+

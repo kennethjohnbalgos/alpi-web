@@ -1,4 +1,19 @@
 AlpiWeb::Application.routes.draw do
+
+
+  get "explore/index"
+
+
+  mount Ckeditor::Engine => '/ckeditor'
+
+  match "dashboard(/:action)" => "dashboard#index"
+  match "condominiums(/:action)" => "condominiums#index"
+  match "explore(/:action)" => "explore#index"
+
+  resources :content_homes
+  resources :content_condos
+  resources :content_explores
+
   get "home/index"
 
   # The priority is based upon order of creation:

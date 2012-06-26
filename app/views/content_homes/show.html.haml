@@ -1,0 +1,10 @@
+%p#notice= notice
+
+%div.preview
+  .title
+    = image_tag('logo_ayalapremier.png')
+  =raw @content_home.context
+
+= link_to 'Edit Page', edit_content_home_path(@content_home)
+\|
+= link_to 'Back To Dashboard', dashboard_path

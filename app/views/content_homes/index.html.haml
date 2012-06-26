@@ -1,0 +1,24 @@
+%h1 Content Homepage
+
+%table.content
+  %tr
+    %th Title
+    %th Context
+    %th Description
+    %th
+    %th
+    %th
+
+  - @content_homes.each do |content_home|
+    %tr
+      %td= content_home.title
+      %td= content_home.context
+      %td= content_home.description
+      %td= link_to 'Show', content_home
+      %td= link_to 'Edit', edit_content_home_path(content_home)
+      %td= link_to 'Destroy', content_home, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'Back to Dashboard', dashboard_path
+= link_to 'New Content', new_content_home_path

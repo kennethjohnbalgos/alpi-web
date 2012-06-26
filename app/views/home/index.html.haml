@@ -1,2 +1,25 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.haml
+#galleria
+  = image_tag('slideshow/slide_anvaya.jpg')
+  = image_tag('slideshow/slide_elaro.jpg')
+  = image_tag('slideshow/slide_parkterraces.jpg')
+  = image_tag('slideshow/slide_santierra.jpg')
+  = image_tag('slideshow/slide_westtower.jpg')
+= image_tag('divider_2.png')
+%br/
+%br/
+= image_tag('home_tagline.jpg')
+%br/
+#subtitle
+  = "Engaged in the development of business and commercial districts, residential subdivisions,and infrastructure projects."
+= image_tag('divider_2.png')
+%br/
+#contact_info
+  = "Contact:"
+  .value= "JC Prado"
+  = "Mobile:"
+  .value= "0917 8582551"
+  = "Email:"
+  .value{class: 'last'}= "jcprado.ayalaland@gmail.com"
+%script
+  Galleria.loadTheme('galleria/themes/miniml/galleria.miniml.min.js')
+  render_slideshow()
