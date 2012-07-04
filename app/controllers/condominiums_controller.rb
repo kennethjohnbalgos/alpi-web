@@ -4,5 +4,6 @@ class CondominiumsController < ApplicationController
   end
 
   def view
+    @content = ContentItemCondo.find(params[:id])
   end
 end
