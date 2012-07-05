@@ -11,10 +11,6 @@
     %br/
     = f.text_field :title
   .field
-    = f.label :description
-    %br/
-    = f.text_field :description
-  .field
-    = f.cktext_area :context
+    = f.cktext_area :context, :width => 770, :height => 450
   .actions
     = f.submit 'Save'
