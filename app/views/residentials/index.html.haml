@@ -2,9 +2,9 @@
   .title
     = @content.title
   =raw @content.context
-  - ContentItemResidential.all.each do |residential|
+  - @content_items.each do |residential|
     %div.item
       - image = 'residential_westgroove.jpg' if residential.id == 1
       - image = 'residential_greenfield.jpg' if residential.id == 2
       - image = 'residential_elaronuvali.jpg' if residential.id == 3
-      = link_to image_tag(image), action: 'view', id: residential.id
+      = link_to image_tag(image), action: 'view', property: residential.title

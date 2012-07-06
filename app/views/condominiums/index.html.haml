@@ -2,8 +2,8 @@
   .title
     = @content.title
   =raw @content.context
-  - ContentItemCondo.all.each do |condo|
+  - @content_items.each do |condo|
     %div.item
       - image = 'condo_westtower.jpg' if condo.id == 1
       - image = 'condo_parkterraces.jpg' if condo.id == 2
-      = link_to image_tag(image), action: 'view', id: condo.id
+      = link_to image_tag(image), action: 'view', property: condo.title

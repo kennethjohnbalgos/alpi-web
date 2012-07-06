@@ -1,21 +1,20 @@
-%h1 Content Management Dashboard
-%br/
-=# link_to "Homepage", content_home_path(1)
-%br/
-= link_to "Explore", content_explore_path(1)
-%br/
-= link_to "Condominiums", content_condo_path(1)
-%br/
-- ContentItemCondo.order('title').each do |condo|
-  = link_to condo.title, content_item_condo_path(condo.id)
+%center
+  %h1 Content Management Dashboard
+  =# link_to "Homepage", content_home_path(1)
+  = link_to "Explore", content_explore_path(1)
   %br/
-= link_to "Add Condominium", new_content_item_condo_path
-%br/
-= link_to "Residential Lots", content_residential_path(1)
-%br/
-- ContentItemResidential.order('title').each do |residential|
-  = link_to residential.title, content_item_residential_path(residential.id)
+  = link_to "Condominiums", content_condo_path(1)
   %br/
-= link_to "Add Residential Lot", new_content_item_residential_path
-%br/
-= link_to "The Suites", content_suite_path(1)
+  - ContentItemCondo.order('title').each do |condo|
+    = link_to condo.title, content_item_condo_path(condo.id)
+    %br/
+  =# link_to "Add Condominium", new_content_item_condo_path
+  =# %br/
+  = link_to "Residential Lots", content_residential_path(1)
+  %br/
+  - ContentItemResidential.order('title').each do |residential|
+    = link_to residential.title, content_item_residential_path(residential.id)
+    %br/
+  =# link_to "Add Residential Lot", new_content_item_residential_path
+  =# %br/
+  = link_to "The Suites", content_suite_path(1)

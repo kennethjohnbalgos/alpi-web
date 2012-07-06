@@ -24,10 +24,20 @@ body
 		a
 			color: #4DA8A3
 			text-shadow: rgba(255, 255, 255, 0.5) 0px 1px 1px
-			font-weight: bold
 			text-decoration: none
 			font-family: montez,times new,sans-serif
 			font-size: 34px
+		&.active
+			border-left: 1px solid #aaa
+			border-right: 1px solid #aaa
+			border-bottom: 1px solid #aaa
+			margin: 0px -1px
+			background:	#F4F4F4
+			background: -moz-linear-gradient(top, #4da8a3, #EEEEEE)
+			background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#4da8a3), to(#EEEEEE))
+			a
+				color: #eee
+				text-shadow: 0 0 6px #111
 		&:hover
 			border-left: 1px solid #aaa
 			border-right: 1px solid #aaa
@@ -145,7 +155,6 @@ body
 						padding: 0
 				a
 					text-decoration: none
-					font-size: 20px
 				img.bordered
 					border: 1px solid #c6c6c6
 		

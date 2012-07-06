@@ -1,5 +1,9 @@
-%div{class: 'menu_item first'}= link_to "Explore", "/explore"
-%div{class: 'menu_item'}= link_to "Condominiums", "/condominiums"
-%div{class: 'menu_item'}= link_to "Residential Lots", "/residential_lots"
-%div{class: 'menu_item'}= link_to "The Suites", "/the_suites"
-%div{class: 'menu_item'}= link_to "Events", "#"
+%div{class: "menu_item first #{'active' if params[:controller] == 'explore'}"}
+  = link_to "Explore", "/explore"
+%div{class: "menu_item #{'active' if params[:controller] == 'condominiums'}"}
+  = link_to "Condominiums", "/condominiums"
+%div{class: "menu_item #{'active' if params[:controller] == 'residentials'}"}
+  = link_to "Residential Lots", "/residential_lots"
+%div{class: "menu_item #{'active' if params[:controller] == 'suite'}"}
+  = link_to "The Suites", "/the_suites"
+=# %div{class: 'menu_item'}= link_to "Events", "#"
