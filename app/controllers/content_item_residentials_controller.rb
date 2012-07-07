@@ -61,7 +61,7 @@ class ContentItemResidentialsController < ApplicationController
 
     respond_to do |format|
       if @content_item_residential.update_attributes(params[:content_item_residential])
-        format.html { redirect_to @content_item_residential, notice: 'Content item residential was successfully updated.' }
+        format.html { render action: "edit", notice: 'Content item residential was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

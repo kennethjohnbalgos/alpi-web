@@ -7,3 +7,5 @@
       - image = 'condo_westtower.jpg' if condo.id == 1
       - image = 'condo_parkterraces.jpg' if condo.id == 2
       = link_to image_tag(image), action: 'view', property: condo.title
+  %div.item
+    = link_to image_tag('condo_thesuites.jpg'), '/the_suites'

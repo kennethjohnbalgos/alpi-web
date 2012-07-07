@@ -61,7 +61,7 @@ class ContentSuitesController < ApplicationController
 
     respond_to do |format|
       if @content_suite.update_attributes(params[:content_suite])
-        format.html { redirect_to @content_suite, notice: 'Content suite was successfully updated.' }
+        format.html { render action: 'edit', notice: 'Content suite was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
