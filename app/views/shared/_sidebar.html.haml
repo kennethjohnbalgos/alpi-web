@@ -25,7 +25,7 @@
   = link_to image_tag('sideicon_parkterraces.png', class: 'property'),
     controller: 'condominiums', action: 'view', property: 'Park Terraces'
   
-- unless params[:controller] == 'suite'
+- unless params[:controller] == 'suite' || (params[:property].nil? && params[:controller] == 'condominiums')
   = link_to image_tag('sideicon_thesuites.png', class: 'property'),
     controller: 'suite'
   
