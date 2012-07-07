@@ -7,10 +7,10 @@
           %li= msg
 
   .field
-    = f.label :title
     %br/
     = f.text_field :title
   .field
     = f.cktext_area :context, :width => 770, :height => 450
+  %br/
   .actions
     = f.submit 'Save'

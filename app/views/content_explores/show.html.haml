@@ -4,7 +4,7 @@
   .title
     = image_tag('logo_ayalapremier.png')
   =raw @content_explore.context
-
-= link_to 'Edit Page', edit_content_explore_path(@content_explore)
-\|
-= link_to 'Back to Dashboard', "/dashboard"
+%center
+  = link_to 'Edit Page', edit_content_explore_path(@content_explore)
+  \|
+  = link_to 'Back to Dashboard', "/dashboard"
