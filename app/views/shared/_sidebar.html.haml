@@ -10,25 +10,25 @@
 %br/
 
 - unless params[:property] == 'Ayala Greenfield Estates' || (params[:property].nil? && params[:controller] == 'residentials')
-  = link_to image_tag('sideicon_greenfield.jpg', class: 'property'),
+  = link_to image_tag('sideicon_greenfield.png', class: 'property'),
     controller: 'residentials', action: 'view', property: 'Ayala Greenfield Estates'
 
 - unless params[:property] == 'Ayala Westgrove Heights' || (params[:property].nil? && params[:controller] == 'residentials')
-  = link_to image_tag('sideicon_westgrove.jpg', class: 'property'),
+  = link_to image_tag('sideicon_westgrove.png', class: 'property'),
     controller: 'residentials', action: 'view', property: 'Ayala Westgrove Heights'
  
 - unless params[:property] == 'Elaro Nuvali' || (params[:property].nil? && params[:controller] == 'residentials')
-  = link_to image_tag('sideicon_elaronuvali.jpg', class: 'property'),
+  = link_to image_tag('sideicon_elaronuvali.png', class: 'property'),
     controller: 'residentials', action: 'view', property: 'Elaro Nuvali'
   
 - unless params[:property] == 'Park Terraces' || (params[:property].nil? && params[:controller] == 'condominiums')
-  = link_to image_tag('sideicon_parkterraces.jpg', class: 'property'),
+  = link_to image_tag('sideicon_parkterraces.png', class: 'property'),
     controller: 'condominiums', action: 'view', property: 'Park Terraces'
   
 - unless params[:controller] == 'suite'
-  = link_to image_tag('sideicon_thesuites.jpg', class: 'property'),
+  = link_to image_tag('sideicon_thesuites.png', class: 'property'),
     controller: 'suite'
   
 - unless params[:property] == 'West Tower' || (params[:property].nil? && params[:controller] == 'condominiums')
-  = link_to image_tag('sideicon_westtower.jpg', class: 'property'),
+  = link_to image_tag('sideicon_westtower.png', class: 'property'),
     controller: 'condominiums', action: 'view', property: 'West Tower'
