@@ -1,6 +1,7 @@
 .page
   =raw @content.context
   %center
-    = link_to "Visit the Website", "http://www.thesuites.com.ph", class: 'button', target: '_blank'
+    = link_to "Visit the Website", "http://www.thesuites.com.ph", class: 'button', target: '_blank',
+      onclick: "alert('Website temporarily unavailable. Please try again later.'); return false;"
     %br/
     %br/
